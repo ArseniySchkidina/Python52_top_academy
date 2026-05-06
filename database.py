@@ -180,7 +180,6 @@ class BikeDeliveryApp(tk.Tk):
         self.menu_canvas.bind("<Configure>", self._resize_menu_window)
         self.menu_canvas.bind_all("<MouseWheel>", self._on_mousewheel)
 
-        # Right: sidebar/cart
         sidebar = ttk.Frame(main, style="Sidebar.TFrame", width=380)
         sidebar.pack(side="right", fill="y")
         sidebar.pack_propagate(False)
