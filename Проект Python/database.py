@@ -178,7 +178,6 @@ class BikeDeliveryApp(tk.Tk):
         self.menu_canvas.bind("<Configure>", self._resize_menu_window)
         self.menu_canvas.bind_all("<MouseWheel>", self._on_mousewheel)
 
-        # Right: sidebar/cart
         sidebar = ttk.Frame(main, style="Sidebar.TFrame", width=380)
         sidebar.pack(side="right", fill="y")
         sidebar.pack_propagate(False)
@@ -287,7 +286,6 @@ class BikeDeliveryApp(tk.Tk):
             card.configure(width=300, height=330)
             card.grid_propagate(False)
 
-            # Image
             img_frame = ttk.Frame(card, style="White.TFrame")
             img_frame.pack(fill="x", padx=12, pady=(12, 8))
 
