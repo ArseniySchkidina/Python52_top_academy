@@ -18,7 +18,7 @@ class BikeDeliveryApp(tk.Tk):
         self.minsize(1180, 700)
         self.configure(bg="#f4f7fb")
 
-        self.cart = {}  # dish_id -> {"name", "price", "qty"}
+        self.cart = {}
         self.image_cache = {}
 
         self._init_db()
