@@ -17,13 +17,10 @@ class BikeDeliveryApp(tk.Tk):
         self.geometry("1280x780")
         self.minsize(1180, 700)
         self.configure(bg="#f4f7fb")
-
         self.cart = {}
         self.image_cache = {}
-
         self._init_db()
         self.dishes = self._load_dishes()
-
         self._setup_style()
         self._build_ui()
         self._render_menu()
@@ -180,6 +177,7 @@ class BikeDeliveryApp(tk.Tk):
         self.menu_canvas.bind("<Configure>", self._resize_menu_window)
         self.menu_canvas.bind_all("<MouseWheel>", self._on_mousewheel)
 
+        # Right: sidebar/cart
         sidebar = ttk.Frame(main, style="Sidebar.TFrame", width=380)
         sidebar.pack(side="right", fill="y")
         sidebar.pack_propagate(False)
